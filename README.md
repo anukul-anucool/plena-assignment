@@ -12,7 +12,11 @@ The API has the following endpoints:
 /posts: GET endpoint that retrieves a list of posts filtered by tag, user, startDate and endDate query parameters. The endpoint returns a JSON object with an array of posts.
 
 /posts/:title: GET endpoint that retrieves a post by its title. The endpoint returns a JSON object with the post.
+
 /posts: POST endpoint that creates a new post. The endpoint expects a JSON object with a title, description, tags, and an image property. The endpoint requires the user to be authenticated with a valid JWT.
+
 /posts/:postId/comments: POST endpoint that creates a new comment for a post. The endpoint expects a JSON object with a text property. The endpoint requires the user to be authenticated with a valid JWT.
+
 /posts/:postId: DELETE endpoint that deletes a post by its ID. The endpoint requires the user to be authenticated with a valid JWT and to be the author of the post.
+
 /posts/:postId/comments/:commentId: DELETE endpoint that deletes a comment by its ID. The endpoint requires the user to be authenticated with a valid JWT and to be the author of the comment.
